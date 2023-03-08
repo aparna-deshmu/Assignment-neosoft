@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from "react";
 import { Link, useParams } from "react-router-dom";
-import { useFetch } from "../helper/useFtech";
 import "./display.css";
 export default function Display() {
   const params = useParams();
@@ -15,6 +14,7 @@ export default function Display() {
     };
     fetchAPI();
   }, []);
+  
   const player = players.filter((p)=>p.Id === params.imageId);
   return (
     <>
